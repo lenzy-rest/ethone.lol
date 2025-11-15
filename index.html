@@ -1,1 +1,461 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Ethone Staff - Professional Team" name="description">
+  <meta content="Ethone, staff, team, professionals" name="keywords">
+  <meta content="https://ethone.top" name="application-url">
+  <meta content="ethone top" name="application-name">
+  <meta content="index, follow" name="robots">
+
+  <meta property="og:title" content="Ethone Staff" />
+  <meta property="og:description" content="Meet the Ethone professional team" />
+  <meta property="og:url" content="https://ethone.top" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1352802241370656902/1360000171001516042/Ethrone_server_icon.png" />
+  <meta property="og:image:width" content="256" />
+  <meta property="og:image:height" content="256" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ethone" />
+  <meta name="theme-color" content="#8A2BE2">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Ethone Staff</title>
+  
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+    background-color: #0a0e1a;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glow-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+    animation: float-glow 20s ease-in-out infinite;
+}
+
+.glow-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, transparent 70%);
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.glow-2 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, transparent 70%);
+    top: 50%;
+    right: 10%;
+    animation-delay: -7s;
+}
+
+.glow-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+    bottom: 20%;
+    left: 30%;
+    animation-delay: -14s;
+}
+
+@keyframes float-glow {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.main-section {
+    min-height:100vh; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center; 
+    position:relative;
+    padding-top: 100px;
+}
+
+.main-heading {
+    font-size:5.5rem; 
+    font-weight:900; 
+    text-align:center; 
+    letter-spacing:1px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.features-text {
+    color: #8b5cf6;
+    font-size:0.9rem; 
+    font-weight:bold; 
+    text-align:center; 
+    letter-spacing:0.3em; 
+    margin:10px 0 30px;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.auth-button {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color:white; 
+    border:none; 
+    padding:14px 45px; 
+    font-size:1rem; 
+    font-weight:bold; 
+    border-radius:50px; 
+    cursor:pointer; 
+    overflow:hidden; 
+    transition: all 0.3s ease; 
+    position:relative; 
+    letter-spacing:0.5px;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+}
+
+.auth-button::before {
+    content:''; 
+    position:absolute; 
+    top:0; 
+    left:-100%; 
+    width:100%; 
+    height:100%; 
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); 
+    transition:left 0.6s ease;
+}
+
+.auth-button:hover::before {left:100%;}
+.auth-button:hover {
+    box-shadow: 0 8px 40px rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+}
+
+.staff-section {
+    padding:120px 40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position: relative;
+}
+
+.staff-heading {
+    font-size:4rem;
+    font-weight:900;
+    margin-bottom:50px;
+    text-align:center;
+    background: linear-gradient(180deg, #ffffff 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.staff-member {
+    background: rgba(17, 20, 41, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 320px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+.member-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 3px solid rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.member-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8b5cf6;
+    margin-bottom: 10px;
+}
+
+.member-role {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(17, 20, 41, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+    background: rgba(139, 92, 246, 0.2);
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #8b5cf6;
+}
+
+.footer {
+    background: rgba(17, 20, 41, 0.6);
+    backdrop-filter: blur(10px);
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    bottom:0;
+    width:100%;
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.footer-left {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.footer-left img {
+    width:35px;
+    height:35px;
+}
+
+.footer-left span {
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.footer-right a {
+    margin-left:20px;
+    color:#d1d5db;
+    text-decoration:none;
+    font-weight:600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-right a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    transition: width 0.3s ease;
+}
+
+.footer-right a:hover {
+    color:#8b5cf6;
+}
+
+.footer-right a:hover::after {
+    width: 100%;
+}
+
+@media(max-width:900px){
+    .main-heading {
+        font-size: 3rem;
+    }
+    .staff-heading {
+        font-size: 2.5rem;
+    }
+    .staff-container {
+        gap: 20px;
+    }
+    .staff-member {
+        width: 280px;
+        padding: 20px;
+    }
+    .member-circle {
+        width: 120px;
+        height: 120px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-right a {
+        margin: 0 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="glow-orb glow-1"></div>
+<div class="glow-orb glow-2"></div>
+<div class="glow-orb glow-3"></div>
+
+<div class="content">
+    <section class="main-section">
+        <h1 class="main-heading">Ethone Staff</h1>
+        <div class="features-text">P O W E R F U L, ‎  S E C U R E, ‎  R E L I A B L E</div>
+        <button class="auth-button" onclick="window.location.href='https://discord.gg/ethone'">Get Started</button>
+    </section>
+
+    <section class="staff-section">
+        <h2 class="staff-heading">Our Team</h2>
+        <div class="staff-container">
+            <!-- Sefty Profile -->
+            <div class="staff-member">
+                <div class="member-circle">
+                    <img src="sefty.png" alt="Sefty">
+                </div>
+                <div class="member-name">Sefty</div>
+                <div class="member-role">Sales Man</div>
+                <div class="social-links">
+                    <div class="social-icon" onclick="window.location.href='https://discord.com/users/729098619369554061'">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.07,10.59C14.72,10.59 15.24,11.16 15.24,11.86C15.24,12.55 14.72,13.13 14.07,13.13C13.42,13.13 12.91,12.55 12.91,11.86C12.91,11.16 13.42,10.59 14.07,10.59Z"/>
+                        </svg>
+                    </div>
+                    <div class="social-icon" onclick="window.location.href='https://t.me/not_sefty'">
+                         <svg viewBox="0 0 24 24" fill="currentColor">
+                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.89 7.15l-1.33 6.26c-.1.46-.38.57-.77.36l-2.12-1.56-1.02.98c-.11.11-.21.21-.43.21l.15-2.19 3.99-3.6c.17-.15-.04-.24-.27-.09l-4.93 3.11-2.12-.66c-.46-.14-.47-.46.1-.68l8.29-3.19c.38-.14.72.09.6.67z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lenzy Profile -->
+            <div class="staff-member">
+                <div class="member-circle">
+                    <img src="lenzy.jpg" alt="Lenzy">
+                </div>
+                <div class="member-name">Lenzy</div>
+                <div class="member-role">Operations Manager</div>
+                <div class="social-links">
+                    <div class="social-icon" onclick="window.location.href='https://discord.com/users/1210567999640182835'">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.07,10.59C14.72,10.59 15.24,11.16 15.24,11.86C15.24,12.55 14.72,13.13 14.07,13.13C13.42,13.13 12.91,12.55 12.91,11.86C12.91,11.16 13.42,10.59 14.07,10.59Z"/>
+                        </svg>
+                    </div>
+                    <div class="social-icon" onclick="window.location.href='https://t.me/lenziii'">
+                         <svg viewBox="0 0 24 24" fill="currentColor">
+                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.89 7.15l-1.33 6.26c-.1.46-.38.57-.77.36l-2.12-1.56-1.02.98c-.11.11-.21.21-.43.21l.15-2.19 3.99-3.6c.17-.15-.04-.24-.27-.09l-4.93 3.11-2.12-.66c-.46-.14-.47-.46.1-.68l8.29-3.19c.38-.14.72.09.6.67z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Yuchi Profile -->
+            <div class="staff-member">
+                <div class="member-circle">
+                    <img src="yuchi.jpg" alt="Yuchi">
+                </div>
+                <div class="member-name">Yuchi</div>
+                <div class="member-role">Sales Man</div>
+                <div class="social-links">
+                    <div class="social-icon" onclick="window.location.href='https://discord.com/users/1424488026784137426'">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.07,10.59C14.72,10.59 15.24,11.16 15.24,11.86C15.24,12.55 14.72,13.13 14.07,13.13C13.42,13.13 12.91,12.55 12.91,11.86C12.91,11.16 13.42,10.59 14.07,10.59Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="favicon.png" alt="Ethone Logo">
+            <span>Ethone</span>
+        </div>
+        <div class="footer-right">
+            <a href="https://discord.gg/ethone" target="_blank">Discord</a>
+            <a href="https://t.me/EthoneBotnet" target="_blank">Telegram</a>
+            <a href="https://ethone.net/prices" target="_blank">Prices</a>
+            <a href="https://ethone.net/tos" target="_blank">TOS </a>
+          <a href="https://status.ethone.ru" target="_blank">Status </a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
